@@ -1,0 +1,21 @@
+/*需要切换的颜色变量*/
+$color-primary1:#ff0000; /* 更换的颜色 */
+$color-primary2:#00ff00; /* 更换的颜色 */
+$color-primary3:#0000ff; /* 更换的颜色 */
+$color-primary4:#EB6100; /* 更换的颜色 */
+
+$mycolorn:#000000;
+
+/*定义方法*/
+@mixin font_color($color){/*通过该函数设置字体颜色，后期方便统一管理；*/
+	color:$color;
+  [data-theme="theme1"] & {
+    color:$color-primary1;
+  }
+  [data-theme="theme2"] & {
+    color:$color-primary2;
+  }
+  [data-theme="theme3"] & {
+    color:$color-primary4;
+  }
+}
